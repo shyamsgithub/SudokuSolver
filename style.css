@@ -1,0 +1,138 @@
+html *{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: rgb(247, 240, 226);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.container{
+    /* border:1px solid red; */
+    display: flex;
+    justify-content: flex-start;
+    height: 270px;
+}
+
+.gridDiv{
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: inherit;
+}
+
+.gridDiv div{ /* all the lineDivs*/
+    width: 270px;
+    /* width was 100% */
+    height: 11.11%;
+    display: flex;
+    flex-direction: row;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.lineDivTop{
+    border-top: 2px solid black;
+
+}
+
+.lineDivBottom{
+    border-bottom: 2px solid black; 
+}
+
+.lineDivBottom input, .lineDivMiddle input, .lineDivTop input{
+    width: 11.11%;
+    /* width: 27.8px; */
+    text-align: center;
+    border: 1px solid gray;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.solvedInput{
+    background: aquamarine;
+}
+.unsolvedInput{
+    background: lightblue;
+}
+
+.incorrectInput{
+    background: red;
+}
+
+
+.puzzleList{
+    /*height: inherit;*/
+    width: max-content;
+    height: 250px;
+    border-left: 1px solid black;
+    
+    border-top: 1px solid black;
+    overflow-y: scroll;    
+}
+
+.puzzleListItem{
+    border-bottom: 1px solid black;
+
+    width: 200px;
+    height: 40px; 
+    line-height: 40px;
+    text-align: center;
+    font-size: medium;
+    
+    /* background: honeydew; */
+    list-style-type: none;
+
+}
+
+.puzzleListItem:hover{
+    background:lightblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttonListOne{
+    display:block
+}
+.buttonListTwo{
+    display: none;
+}
+
+
+.buttonListItem{
+    list-style-type: none;
+    padding: 10px;
+    height: 40px;
+    position: relative;
+
+}
+
+.buttonListItem button{
+    height: inherit;
+    font-size: medium;
+    font-weight:bold;
+    background-color: black;
+    color: white;
+    /* border: 0; */
+    border-radius: 10px;
+    width: 200px;
+    position: relative;
+    cursor: pointer;  
+    /* display: block; */
+}
+
+
+
+.puzzleListItem:active, .buttonListItem button:active{
+    font-size: large;
+}
+
+.buttonListItem button:hover{
+    /* font-weight: bold; */
+    /* background: rgb(211, 6, 6); */
+    background-color: aquamarine;
+    color: black;
+}
+
