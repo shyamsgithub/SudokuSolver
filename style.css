@@ -64,29 +64,25 @@ body{
     background: red;
 }
 
-
-.puzzleList{
-    /*height: inherit;*/
+.puzzleList {
     width: max-content;
-    height: 250px;
-    border-left: 1px solid black;
-    
-    border-top: 1px solid black;
-    overflow-y: scroll;    
+    max-height: 250px;
+    border: 1px solid black;
+    overflow-y: auto;
+    padding: 0;
+    margin-top: 10px;
 }
 
-.puzzleListItem{
-    border-bottom: 1px solid black;
-
-    width: 200px;
-    height: 40px; 
+.puzzleListItem {
+    width: 100%;
+    height: 40px;
     line-height: 40px;
     text-align: center;
-    font-size: medium;
-    
-    /* background: honeydew; */
+    font-size: 1rem;
     list-style-type: none;
-
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .puzzleListItem:hover{
