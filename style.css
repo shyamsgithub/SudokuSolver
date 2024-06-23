@@ -1,140 +1,84 @@
-html *{
+html, body {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f4f8;
-    margin-left: 10px;
-    margin-top: 10px;
     color: #333;
-    
+    margin: 10px;
 }
-.container{
-    /* border:1px solid red; */
+
+.container {
     display: flex;
-    justify-content: flex-start;
-    height: 270px;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    margin-top: 20px;
 }
 
-.gridDiv{
-    display: flex;
-    flex-direction: column;
-    width: 270px;
-    height: inherit;
-}
-
-.gridDiv div{ /* all the lineDivs*/
-    width: 270px;
-    /* width was 100% */
-    height: 11.11%;
-    display: flex;
-    flex-direction: row;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-}
-
-.lineDivTop{
-    border-top: 2px solid black;
-
-}
-
-.lineDivBottom{
-    border-bottom: 2px solid black; 
-}
-
-.lineDivBottom input, .lineDivMiddle input, .lineDivTop input{
-    width: 11.11%;
-    /* width: 27.8px; */
-    text-align: center;
-    border: 1px solid gray;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.solvedInput{
-    background: aquamarine;
-}
-.unsolvedInput{
-    background: lightblue;
-}
-
-.incorrectInput{
-    background: red;
-}
-
-
-.puzzleList{
-    /*height: inherit;*/
-    width: max-content;
-    height: 250px;
-    border-left: 1px solid black;
-    
-    border-top: 1px solid black;
-    overflow-y: scroll;    
-}
-
-.puzzleListItem{
-    border-bottom: 1px solid black;
-
-    width: 200px;
-    height: 40px; 
-    line-height: 40px;
-    text-align: center;
-    font-size: medium;
-    
-    /* background: honeydew; */
+.buttonListOne, .buttonListTwo {
+    margin-right: 20px;
+    padding: 0;
     list-style-type: none;
-
 }
 
-.puzzleListItem:hover{
-    background:lightblue;
-    font-weight: bold;
-    cursor: pointer;
+.buttonListItem {
+    margin-bottom: 10px;
 }
 
-.buttonListOne{
-    display:block
-}
-.buttonListTwo{
-    display: none;
-}
-
-
-.buttonListItem{
-    list-style-type: none;
-    padding: 10px;
+.buttonListItem button {
+    width: 100%;
     height: 40px;
-    position: relative;
-
-}
-
-.buttonListItem button{
-    height: inherit;
     font-size: medium;
-    font-weight:bold;
+    font-weight: bold;
     background-color: black;
     color: white;
-    /* border: 0; */
+    border: none;
     border-radius: 10px;
-    width: 200px;
-    position: relative;
-    cursor: pointer;  
-    /* display: block; */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-
-
-.puzzleListItem:active, .buttonListItem button:active{
-    font-size: large;
-}
-
-.buttonListItem button:hover{
-    /* font-weight: bold; */
-    /* background: rgb(211, 6, 6); */
+.buttonListItem button:hover {
     background-color: aquamarine;
     color: black;
 }
+
+.puzzleList {
+    width: max-content;
+    height: 250px;
+    border: 1px solid black;
+    overflow-y: auto;
+    padding: 0;
+}
+
+.puzzleListItem {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.puzzleListItem:hover {
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+.puzzleListDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+em {
+    font-style: normal;
+}
+
 
